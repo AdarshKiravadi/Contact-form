@@ -1,0 +1,13 @@
+.preview {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    /* width: 75rem; */
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 40px;
+  
+}

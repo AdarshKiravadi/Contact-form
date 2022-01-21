@@ -1,0 +1,46 @@
+.container {
+   flex: 9;
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 40px;
+  }
+
+  .inline{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      
+      
+  }
+ 
+  input{
+    width: 20rem; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+     margin: 10px;
+     
+
+  }
+ .company, .email, .address{
+   display: flex;
+   align-items: center;
+ }
+ 
+ p{
+   margin: 0px;
+   display: flex;
+   align-items: flex-start;
+   color: red;
+   word-wrap: break-word;
+   
+ }
+button{
+  display: inline;
+  margin-right: 20px;
+}

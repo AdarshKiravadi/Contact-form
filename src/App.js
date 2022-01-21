@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Form from "./form/Form";
+import Grid from "./grid/Grid";
+
+import Preview from "./preview/Preview";
 
 function App() {
+  const [preview, setPreview] = useState([]);
+  const [previewdata, setPreviewdata] = useState({});
+
+
+  const valueHandler = (val) => {
+    setPreview([...preview, val]);
+   
+  };
+
+  const previewHandler = (pre) => {
+    setPreviewdata(pre);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="main">
+        <Form valuehandler={valueHandler} previewHandler={previewHandler} />
+        <Preview previewdata={previewdata} />
+      </div>
+
+      <Grid pre={preview} />
     </div>
   );
 }
